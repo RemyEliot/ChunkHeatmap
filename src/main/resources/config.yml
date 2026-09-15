@@ -6,7 +6,6 @@ points:
   mob: 2.0
   item: 0.5
   tile-entity: 1.0
-  hopper: 3.0
   player: 0.0
 
 # Color thresholds (evaluated top-to-bottom: first matching min-heat rule wins)
