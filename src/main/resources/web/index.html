@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chunk Heatmap</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div style="position: absolute; top: 10px; left: 10px; z-index: 30; background: rgba(0,0,0,0.7); padding: 8px; border-radius: 4px;">
+    <label for="worldSelect">World: </label>
+    <select id="worldSelect" onchange="drawGrid()">
+        <option value="world">world</option>
+        <option value="world_nether">world_nether</option>
+        <option value="world_the_end">world_the_end</option>
+    </select>
+</div>
+
+<canvas id="grid"></canvas>
+<div id="tooltip"></div>
+
+<div id="sidebar">
+    <h3 id="sidebar-title">Chunk Controls</h3>
+    <p>Heat: <span id="sidebar-heat"></span></p>
+    <input type="text" id="admin-name" placeholder="Your Username (for Teleport)">
+
+    <button class="danger" style="background:#b91c1c;" onclick="sendAction('PURGE_ENTITIES')">Kill All Entities</button>
+    <button class="danger" onclick="sendAction('PURGE_ITEMS')">Purge Dropped Items</button>
+    <button class="danger" onclick="sendAction('PURGE_MOBS')">Purge Hostile Mobs</button>
+    <button onclick="sendAction('TELEPORT')">Teleport Here</button>
+    <button onclick="closeSidebar()" style="background:#555; margin-top:20px;">Close</button>
+
+    <div id="sidebar-logo">
+        <img src="/logo.png" alt="Heatmap Logo">
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+# da port
+web-port: 8080
+
+# Heat score points assigned per entity/block type in a chunk
+points:
+  mob: 2.0
+  item: 0.5
+  tile-entity: 1.0
+  hopper: 3.0
+  player: 0.0
+
+# Color thresholds (evaluated top-to-bottom: first matching min-heat rule wins)
+color-thresholds:
+  - min-heat: 60.0
+    color: "#ef4444"
+  - min-heat: 31.0
+    color: "#f97316"
+  - min-heat: 11.0
+    color: "#eab308"
+  - min-heat: 0.1
+    color: "#22c55e"
+  - min-heat: 0.0
+    color: "#00ff00"
+
+
+# https://www.remyeliot.dev/xJn72bO/

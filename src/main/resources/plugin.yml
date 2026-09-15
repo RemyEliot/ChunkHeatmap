@@ -1,0 +1,16 @@
+name: ChunkHeatmap
+version: '${version}'
+
+main: dev.remy.chunkHeatmap.ChunkHeatmap
+api-version: '26.2'
+load: STARTUP
+
+authors: [ RemyEliot ]
+website: remyeliot.dev
+
+commands:
+  chunkheatmap:
+    description: ChunkHeatmap...
+    aliases: [ch]
+    permission: chunkheatmap.admin
+    permission-message: "§c&lYou do not have permission to this command."
